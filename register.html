@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        #screen{
+            width: 300px;
+            height:300px;
+            background-color: aquamarine;
+            margin-top: 80px;
+            margin-left: 38%;
+        }
+        #screen>h1{
+            font-size: 15opx;
+            margin-left: 80px;
+            margin-top: 20px;
+        }
+        #screen>input{
+            width: 70%;
+            margin-left: 35px;
+            border-radius: 5px;
+            border: none;
+        }
+        #screen>button{
+            width: 30%;
+            margin-left: 30px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+
+    </style>
+</head>
+<body>
+<div id="body">
+<div id="screen">
+    <h1>Register</h1>
+        <input type="text" id="name" placeholder="Enter your name" required/><br><br>
+        <input type="email" id="email" placeholder="Enter your Email" required/><br><br>
+        <input type="password" id="password" placeholder="Enter your password" required/><br><br>
+    <button onclick="register()">Register</button>
+    <button><a href="./login.html">log in</a></button>
+</div>
+</div>
+<script src="./server.js"></script>
+</body>
+</html>

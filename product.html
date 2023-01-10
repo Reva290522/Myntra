@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+   <script src="https://kit.fontawesome.com/44effbc593.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+}
+#navbar{
+    width: 100%;
+    height:60px;
+    display: flex;
+}
+#navbar>img{
+    height: 50px;
+    width: 80px;
+    margin-top: 5px;
+}
+#section{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    width: 40%;
+}
+#section>:nth-child(7){
+    color: rgb(255,85,125);
+    font-size: 10px;
+    margin-top:-8x ;
+}
+#navbar>input{
+    height:30px;
+    width: 30%;
+    margin-top:15px;
+}
+#icon{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
+#body{
+    border: 1px solid blue;
+    width: 100%;
+    display: flex;
+}
+#leftside{
+    width: 18%;
+    height: 600px;
+    border: 1px solid red;
+}
+#rightside {
+    width: 79%;
+    height: 600px;
+    border: 1px solid green;
+}
+#product{
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+}
+#product>div{
+    width: 100%;
+    display: flex;
+    height: 300px;
+    border: 1px solid black;
+}
+#product>div>div{
+    width: 16%;
+    margin: auto;
+    height: 270px;
+}
+#product>div>div>img{
+    width: 100%;
+    margin: auto;
+    height: 200px;
+}
+#product>div>div>div{
+    height: 45px;
+    width: 80%;
+    text-align: center;
+  
+}
+#product>div>div>div>p{
+    font-size: 12px;
+    margin-bottom: 2px;
+    margin-left: 7px;
+}
+#product>div>div>div>button{
+    width: 90px;
+    margin-left: 6px;
+    margin-top: 2px;
+    color: white;
+    background-color: rgb(255,63,108);
+    border: none;
+    border-radius: 5px;
+}
+    </style>
+
+</head>
+
+<body>
+    <div id="screen">
+        <div id="navbar">
+            <img src="https://images.indianexpress.com/2021/01/myntra.png" />
+            <div id="section">
+                <p>MEN</p>
+                <p>WOMEN</p>
+                <p>KIDS</p>
+                <p>HOME&LIVING</p>
+                <p>BEAUTY</p>
+                <P>STUDIO</P>
+                <p>NEW</p>
+            </div>
+            <input type="text" placeholder="search for products & brands" />
+            <div id="icon">
+            <div>
+                <i class="fa-regular fa-user"></i>
+                <p>profile</p>
+            </div>
+            <div>
+                <i class="fa-regular fa-heart"></i>
+                <p>wishlist</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <p><a href="./cart.html">Bag</a></p>
+            </div>
+        </div>
+        </div>
+        <p>home/footwear/heels</p>
+        <p>women heels </p>
+        <h3>filters</h3>
+        <div id="body">
+            <div id="leftside"><br>
+                <div id="cat">
+                    <h3>categories</h3><br>
+                    <input type="radio">Kurtas<br>
+                    <input type="radio">Kurta sets<br>
+                </div>
+                <hr><br>
+                <div id="brand">
+                    <h3>Brands</h3><br>
+                    <input type="checkbox">Libas(2418)<br>
+                    <input type="checkbox">Kalani(5805)<br>
+                    <input type="checkbox">Ethnic basket(1257)<br>
+                    <input type="checkbox">Anouk(4520)<br>
+                    <input type="checkbox">Indo Era(3060)<br>
+                    <input type="checkbox"> Sangria(2978)<br>
+                    <input type="checkbox"> Varanga(2870)<br>
+                </div>
+                <hr><br>
+                <div id="color">
+                    <h3>Color</h3><br>
+                    <input type="checkbox">Blue (11544)<br>
+                    <input type="checkbox">Green (10890)<br>
+                    <input type="checkbox"> Pink (9929) <br>
+                    <input type="checkbox"> Black (7851)<br>
+                    <input type="checkbox"> Yellow (6397)<br>                 
+                    <input type="checkbox"> Red (5754)<br>
+                </div>
+                <hr><br>
+                <div id="range">
+                    <h3>Discount range</h3><br>
+                    <input type="checkbox">10% and above<br>
+                    <input type="checkbox">20% and above<br>
+                    <input type="checkbox">30% and above <br>
+                    <input type="checkbox"> 40& and above<br>
+                </div>
+            </div>
+            <div id="rightside">
+                <div id="product">
+                    <div id="firstline">
+                        <div id="oneOfOne">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/14046594/2022/6/9/5fba9594-3301-4881-ba56-d56a44570e831654747998773LibasWomenNavyBluePureCottonFloralPrintKurtawithPalazzosDupa1.jpg" />
+                            <div>
+                                <p>Libas</p>
+                                <p>cotton kurti</p>
+                                <p>Rs.1259</p>
+                                <button onclick="addToCart(oneOfOne)">Add to cart</button>
+                            </div>
+                        </div>
+                        <div id="twoOfOne">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/17048614/2022/2/4/b0eb9426-adf2-4802-a6b3-5dbacbc5f2511643971561167KhushalKWomenBlackEthnicMotifsAngrakhaBeadsandStonesKurtawit7.jpg" />
+                            <div>
+                                <p>Kaushal k</p>
+                                <p>black ethic</p>
+                                <p>Rs.1459</p>
+                                <button onclick="addToCart(twoOfOne)">Add to cart</button>
+                            </div>
+                        </div>
+                        <div id="threeOfOne">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/17741474/2022/4/4/3d3b3582-de6e-4514-b39d-9314d7bed3861649077991860KALINIWomenPinkAngrakhaKurtiwithTrousersWithDupatta7.jpg" />
+                            <div>
+                                <p>kalani</p>
+                                <p>printed kurta</p>
+                                <p>Rs.842</p>
+                                <button onclick="addToCart(threeOfOne)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="secline">
+                        <div id="oneOfTwo"><img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/18691030/2022/6/10/fa7db1b8-e72e-40bf-8a88-0d7513eb18fd1654846572582SINGNIWomenPurpleEthnicMotifsPanelledKurtiwithChuridarWithDu1.jpg" />
+                            <div>
+                                <p>Singni</p>
+                                <p>purple ethic</p>
+                                <p>Rs.1499</p>
+                                <button onclick="addToCart(oneOfTwo)">Add to cart</button>
+                            </div>
+                        </div>
+                        <div><img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16712782/2022/4/14/2afbbc41-329f-4850-8aee-00dccdf641851649922896889-Indo-Era-Solid-Wine-Straight-Kurta-Palazzo-With-Dupatta-Set--1.jpg" />
+                            <div>
+                                <p>Indo Era</p>
+                                <p>yoke design</p>
+                                <p>Rs.1199</p>
+                                <button onclick="addToCart(twoOfTwo)">Add to cart</button>
+                            </div>
+                        </div>
+                        <div><img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20282680/2022/10/6/aaaad83a-0a5a-46bc-b778-5e780d5d75d41665042327452KALINIWomenRedStraightPrintedKurtawithTrouserDupatta7.jpg" />
+                            <div>
+                                <p>Indo Era</p>
+                                <p>yoke design</p>
+                                <p>Rs.1199</p>
+                                <button onclick="addToCart(threeOfTwo)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer">
+
+                </div>
+
+            </div>
+        <footer>
+
+        </footer>
+        <script src="./server.js"></script>
+
+</body>
+
+</html>

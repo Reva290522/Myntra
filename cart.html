@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <script src="https://kit.fontawesome.com/44effbc593.js" crossorigin="anonymous"></script>
+    <style>
+        /* *{
+    margin: 0%;
+    padding: 0%; */
+
+#navbar{
+    width: 100%;
+    height:60px;
+    display: flex;
+}
+#navbar>div:nth-child(1)>img{
+    height: 50px;
+    width: 90px;
+}
+
+#navbar>div:nth-child(2){
+    display: flex;
+    width: 30%;
+    margin-left:300px;
+    justify-content: space-between;
+}
+#navbar>div:nth-child(3){
+    display: flex;
+    width:400px;
+     margin-left: 20px;
+}
+#navbar>div:nth-child(3)>img{
+    height: 30px;
+    width: 30px;
+    margin-left: 200px;
+    margin-top: 8px;
+}
+#navbar>div:nth-child(3)>p{
+    margin-top:14px ;
+}
+
+#secure{
+    font-size: 20px;
+    margin-left: 60%;
+    margin-top: 15px;
+}
+#body{
+    display: flex;
+}
+#leftside{
+     height: 500px;
+     width: 40%;
+     display: flex;
+     margin-left:200px;
+     border: 1px solid red;
+}
+#pin{
+    width: 400px;
+    height: 50px;
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid rgb(223, 218, 218);
+    margin-left:30px ;
+    
+}
+#pin>h5{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+
+
+#pin>button{
+    height: 30px;
+    width: 100px;
+    margin-left: 90px;
+    margin-top: 13px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255,63,108);
+    border-color: rgb(255,63,108);
+    background-color: bisque;
+    
+}
+#rightside{
+     border: 1px solid green;
+     height: 500px;
+     width: 33%;
+     margin-left:0;
+   
+}
+#rightside>h3{
+margin-top: 5px;
+}
+#coupons{
+    display:flex;
+    width: 370px;
+    border: 1px solid rgb(214, 207, 207);
+    margin-left: 10px;
+
+}
+#coupons>i{
+    margin-top: 17px;
+    margin-left: 5px;
+}
+#coupons>p{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+#coupons>button{
+    margin-left: 150px;
+    width:70px;
+    height: 25px;
+    margin-top: 13px;
+    background-color: antiquewhite;
+    color: rgb(255,63,108) ;
+    border:none;
+    border-radius: 5px;
+}
+
+
+    </style>
+    <script>
+        //import product data from localStorage
+        //map the data and push every product to html
+
+        window.onload = function(){
+            var isLoggedIn = JSON.parse(localStorage.getItem("isUserLoggedIn"));
+            console.log(isLoggedIn);
+            if (isLoggedIn == true){
+                alert("welcome Home !");
+                const allProducts = JSON.parse(localStorage.getItem("allProducts"));
+                console.log(allProducts);
+                var leftCart = document.getElementById("leftCart");
+                for (var i = 0;i < allProducts.length;i++){
+                    console.log(allProducts[i]);
+                    const innerDiv = document.createElement("div");
+                    innerDiv.style.display= "flex";
+
+                    var leftDiv = document.createElement("div");
+                    var rightDiv = document.createElement("div");
+
+                    var img = document.createElement("img");
+                    img.src = allProducts[i].pI;
+                    img.style.width = "80px";
+                    img.style.height ="80px";
+                    innerDiv.append(img);
+
+
+                    var name = document.createElement("p");
+                    name.innerText = allProducts[i].pN;
+                    innerDiv.append(name);
+
+                    var price = document.createElement("p");
+                    price.innerText = allProducts[i].pP;
+                    innerDiv.append(price);
+
+                    innerDiv.append(leftDiv);
+                    innerDiv.append(rightDiv);
+
+
+                    leftCart.append(innerDiv);
+                }
+            }else{
+                alert("login first");
+                window.location.href = "./login.html"; 
+            }
+        }
+    </script>
+</head>
+<body>
+ <div id="screen">
+    <div id="navbar">
+        <div>
+     <img src="https://images.indianexpress.com/2021/01/myntra.png" />
+    
+    </div>
+     <div>
+        <p>BAG</p>
+        <p>ADDRESS</p>
+        <p>PAYMENT</p>
+    </div>
+    <div>
+     <img id="img" src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"/>
+     <p>100% secure</p>
+    </div>
+    </div>
+</div>
+<div id="body">
+    <div id="leftside">
+    <div id="pin">
+        <h5>Check delivery time & services</h5>
+       <button>Enter pin code</button>
+    </div>
+    <div id="leftCart">
+        <div id="leftDiv"></div>
+        <div id="rightDiv"></div>
+    </div>
+
+    </div>
+    <div id="rightside">
+        <h4>coupons</h4>
+        <div id="coupons">
+        
+        <i class="fa-solid fa-tag"></i>
+        <p>Apply coupons</p>
+        <button>Apply</button>
+    </div>
+    </div>
+   
+        
+  
+    </div>
+</div>
+
+    <script src="./server.js"></script>
+</body>
+</html>
